@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+<table>
+    <tr>
+        <td>Email</td>
+        <td>Message</td>
+        <td>Action</td>
+    </tr>
+   count <%= patients.length ;%>
+   <% for(var i=0; i<patients.length; i++) {  %>
+    <tr>
+        <td><%=patients[i].mail %></td>
+        <td><%=patients[i].message %></td>
+        <td>
+            <ul>
+                <li><a href="/patientUpdate">Edit</a></li>
+                <li><a href="/patientDelete" onclick="">Delete</a></li>
+            </ul>
+        </td>
+    </tr>
+    <% } %>
+</table>
+</body></html>
